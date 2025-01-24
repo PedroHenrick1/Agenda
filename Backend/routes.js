@@ -5,3 +5,4 @@ const usersController = require('./controllers/usersControllers');
 
 route.get('/', usersController.paginaInicial);
 
+module.exports = route;
