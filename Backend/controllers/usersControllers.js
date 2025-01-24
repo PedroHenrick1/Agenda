@@ -1,3 +1,8 @@
-exports.paginaInicial = (req,res) => {
-    res.send('Teste');
+
+
+exports.createUser = (req,res) => {
+    res.send('uma pagina');
+    // const {firstName, lastName, email, password} = req.body;
+    
 }
+
