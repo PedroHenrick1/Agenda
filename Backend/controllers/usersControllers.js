@@ -7,7 +7,6 @@ exports.createUser = async (req,res) => {
     const {firstName, lastName, email, password} = req.body;
     console.log(req.body.firstName);
     bcrypt.genSalt(10, (err,salt) => {   
-
         if (err) {
             console.log('erro no salt', err);
         }
