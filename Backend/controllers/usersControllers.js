@@ -27,3 +27,10 @@ exports.createUser = async (req,res) => {
     });
 }
 
+exports.loginUser = async (req, res) => {
+    
+}
+
+
+module.exports = {prisma};
+
