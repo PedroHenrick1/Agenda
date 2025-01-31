@@ -11,3 +11,13 @@ Content-Type: application/json
     "email": "pedrohenrick52@gmail.com",
     "password": "pedro123" 
 }
+
+### LOGIN users
+
+POST {{apiurl}}/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "pedrohenrick52@gmail.com",
+    "password": "pedro123" 
+}

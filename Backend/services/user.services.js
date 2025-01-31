@@ -1,4 +1,5 @@
-const { prisma } = require('../controllers/usersControllers');
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
 function findUserByEmail(email) {
     return prisma.user.findUnique({
