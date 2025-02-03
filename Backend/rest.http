@@ -14,10 +14,33 @@ Content-Type: application/json
 
 ### LOGIN users
 
+# @name autenticar
 POST {{apiurl}}/users/login HTTP/1.1
 Content-Type: application/json
 
 {
     "email": "pedrohenrick52@gmail.com",
     "password": "pedro123" 
+}
+
+###
+
+@token = {{autenticar.response.body.$.accessToken}}
+@refreshToken = {{autenticar.response.body.$.refreshToken}}
+
+### GET user to id
+
+// @name consultarPerfil
+GET {{apiurl}}/users/profile
+Authorization: Beare {{token}}
+
+###
+
+# @name RefreshToken
+
+POST {{apiurl}}/users/refresh HTTP/1.1
+Content-Type: application/json
+
+{
+    "refreshToken": "{{token}}"
 }

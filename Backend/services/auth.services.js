@@ -17,7 +17,9 @@ function findRefreshToken(token) {
         where: {
             hashedToken: hashToken(token),
         },
-    });
+        
+    }, hashedToken);
+    
 }
 
 function deleteRefreshTokenById(id) {
